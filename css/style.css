@@ -48,17 +48,28 @@ section{
 
 header {
     border: 1px solid black;
-    display: flex;
-    flex-direction:row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    align-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 2%;
+    grid-template-areas: 
+        "title buttons" ;
 }
 
 .nav-title {
-    font-size: 2.4rem;
+    font-size: 2.9rem;
+    font-weight: 600;
+    grid-area: title; 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-self: center; 
+    align-items: center;
+    align-content: center;
+    grid-area: title;
+    margin-left: 4rem;
 }
 
 .nav-title a {
@@ -67,8 +78,16 @@ header {
 }
 
 .nav-buttons {
+    margin-right: 2rem;
+}
+
+.nav-buttons ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    justify-self: center; 
+    align-self: center;   
+    grid-area: buttons;
 }
 
 .nav-buttons ul {
@@ -87,7 +106,18 @@ header {
 
 @media (max-width: 40em) {
     header {
-        display: none;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly
+    }
+    .nav-title {
+        margin: 0;
+    }
+    .nav-buttons {
+        margin: 0;
+    }
+    header a {
+        text-align: center;
     }
 }
 
@@ -98,7 +128,7 @@ header {
 
 .split {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }   
 
 @media (min-width: 40em) {
