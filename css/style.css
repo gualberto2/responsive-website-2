@@ -107,7 +107,6 @@ header {
     header {
         display:flex;
         flex-direction: column;
-        flex-wrap: nowrap;
     }
     .nav-title {
         margin: 0;
