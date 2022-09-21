@@ -58,7 +58,7 @@ header {
 }
 
 .nav-title {
-    font-size: 2.9rem;
+    font-size: 2.6rem;
     font-weight: 600;
     grid-area: title; 
     display: flex;
@@ -107,6 +107,7 @@ header {
     header {
         display:flex;
         flex-direction: column;
+        flex-wrap: nowrap;
     }
     .nav-title {
         margin: 0;
@@ -119,7 +120,6 @@ header {
     }
     header a {
         text-align: center;
-
     }
 }
 
